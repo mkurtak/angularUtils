@@ -104,3 +104,11 @@ If you omit the `ready-to-bind` attribute, the Disqus widget will be created imm
 
  If Disqus is rendered, `disqus-on-ready` function will be called. Callback is registered to disqus by similar technique
  as explained in [this post](https://help.disqus.com/customer/portal/articles/466258-capturing-disqus-commenting-activity-via-callbacks).
+
+## `disqus-on-new-comment` attribute
+
+ Function called after user adds new comment to disqus. Similar to `disqus-on-ready`.
+
+## `disqus-on-paginate` attribute
+
+ Function called after user gets to end of page in discussion and new page with disqus comments is loaded. Similar to `disqus-on-ready`.

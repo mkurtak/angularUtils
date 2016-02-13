@@ -20,6 +20,7 @@ describe('dirDisqus directive', function() {
         'disqus-disable-mobile="false"' +
         'disqus-config-language="{{ post.lang }}"' +
         'disqus-on-ready="ready()"' +
+        'disqus-on-ready="ready()"' +
         'ready-to-bind="{{ loaded }}">' +
         '</dir-disqus>';
 

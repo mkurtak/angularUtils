@@ -38,6 +38,8 @@
                 disqus_remote_auth_s3 : '@disqusRemoteAuthS3',
                 disqus_api_key : '@disqusApiKey',
                 disqus_on_ready: "&disqusOnReady",
+                disqus_on_new_comment: "&disqusOnNewComment",
+                disqus_on_paginate: "&diqusOnPaginate",
                 readyToBind: "@"
             },
             template: '<div id="disqus_thread"></div><a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>',
@@ -72,6 +74,16 @@
                             if (scope.disqus_on_ready) {
                                 this.callbacks.onReady = [function () {
                                     scope.disqus_on_ready();
+                                }];
+                            }
+                            if (scope.disqus_on_new_comment) {
+                                this.callbacks.onNewComment = [function () {
+                                    scope.disqus_on_new_comment();
+                                }];
+                            }
+                            if (scope.disqus_on_paginate) {
+                                this.callbacks.onPaginate = [function () {
+                                    scope.disqus_on_paginate();
                                 }];
                             }
                         };
